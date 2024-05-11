@@ -1,0 +1,421 @@
+#Comment starts with a "#" in the first column.
+#Each line must not be longer than 1024 characters.
+
+
+#=== maxShooterQuadEdgeLength ===
+70.0
+
+#=== maxGathererQuadEdgeLength ===
+30.0
+
+
+#=== VERTICES ===
+
+#Number of vertices.
+64
+
+#Each line must provide the x, y, z coordinates of a vertex.
+#The first vertex has index 0.
+
+#floor (0-3)
+1200 0.0 0.0
+0.0 0.0 0.0
+0.0 0.0 559.2
+1196.8 0.0 559.2
+
+#ceiling (4-7)
+1200 548.8 0.0
+0.0 548.8   0.0
+0.0 548.8 559.2
+1200 548.8 559.2
+
+#light (8-11)
+1080.0 548.8 67.0
+120.0 548.8 67.0
+120.0 548.8 532.0
+1080.0 548.8 532.0
+
+##Spongebob
+#brown_bottom (12-15)
+232.0 0.0 65.0
+82.0 0.0 65.0
+82.0 0.0 272.0
+232.0 0.0 272.0
+
+#brown_top/white_bottom (16-19)
+232.0 50.0 65.0
+82.0 50.0 65.0
+82.0 50.0 272.0
+232.0 50.0 272.0
+
+#white_top/yellow_bottom (20-23)
+232.0 100.0 65.0
+82.0 100.0 65.0
+82.0 100.0 272.0
+232.0 100.0 272.0
+
+#yellow_top (24-27)
+232.0 250.0 65.0
+82.0 250.0 65.0
+82.0 250.0 272.0
+232.0 250.0 272.0
+##
+
+##Patrick
+#green_box_bottom (28-31)
+532.0 0.0 65.0
+332.0 0.0 65.0
+332.0 0.0 272.0
+532.0 0.0 272.0
+
+#green_top/pink_box_bottom (32-35)
+532.0 100.0 65.0
+332.0 100.0 65.0
+332.0 100.0 272.0
+532.0 100.0 272.0
+
+#pink_box_top (36-39)
+532.0 300.0 65.0
+332.0 300.0 65.0
+332.0 300.0 272.0
+532.0 300.0 272.0
+##
+
+##Mr Krabs
+#blue_box_bottom (40-43)
+832.0 0.0 65.0
+632.0 0.0 65.0
+632.0 0.0 272.0
+832.0 0.0 272.0
+
+#blue_top/red_box_bottom (44-47)
+832.0 150.0 65.0
+632.0 150.0 65.0
+632.0 150.0 272.0
+832.0 150.0 272.0
+
+#red_box_top (48-51)
+832.0 350.0 65.0
+632.0 350.0 65.0
+632.0 350.0 272.0
+832.0 350.0 272.0
+##
+
+##Squidward
+#brown_box_bottom (52-55)
+1032.0 0.0 65.0
+962.0 0.0 65.0
+962.0 0.0 272.0
+1032.0 0.0 272.0
+
+#brown_top/turquoise_box_bottom(56-59)
+1032.0 400.0 65.0
+962.0 400.0 65.0
+962.0 400.0 272.0
+1032.0 400.0 272.0
+
+#turquoise_box_top(60-63)
+1032.0 500.0 65.0
+962.0 500.0 65.0
+962.0 500.0 272.0
+1032.0 500.0 272.0
+##
+
+#=== MATERIALS ===
+
+#Number of materials.
+10
+
+#Each material is specified by two lines.
+#First line is the RGB reflectivity.
+#Second line is the RGB emission.
+#The first material has index 0.
+
+
+#light
+0.78 0.78 0.78
+60.0 60.0 60.0
+
+#white
+0.75 0.75 0.75
+0.0 0.0 0.0
+
+#red
+0.7 0.0 0.0
+0.0 0.0 0.0
+
+#green
+0.0 0.7 0.0
+0.0 0.0 0.0
+
+#turquoise
+0.25 0.878 0.816
+0.0 0.0 0.0
+
+#darkgreen
+0.0 0.392 0.0
+0.0 0.0 0.0
+
+#brown
+0.396 0.263 0.129
+0.0 0.0 0.0
+
+#yellow
+1.0 1.0 0.0  
+0.0 0.0 0.0 
+
+#pink
+1.0 0.753 0.796  
+0.0 0.0 0.0       
+
+#blue
+0.0 0.0 1.0  
+0.0 0.0 0.0 
+
+#=== SURFACES ===
+
+#Number of surfaces.
+46
+
+#Each surface is made of one or more quadrilateral patches.
+#For each surface, the first integer is the material index,
+#the second integer is the number of quadrilateral patches,
+#then followed by lines where each corresponds to a
+#quadrilateral patch. Each line has 4 integers, which are
+#indices to the above vertices. The vertices must be listed
+#in counter-clockwise direction when viewed from its frontside.
+
+
+#floor
+4
+1
+0 1 2 3
+
+#ceiling (red)
+2
+4
+4 8 9 5
+5 9 10 6
+6 10 11 7
+7 11 8 4
+
+#light (light)
+0
+1
+8 11 10 9
+
+#back_wall (pink)
+8
+1
+0 4 5 1
+
+#left_wall (yellow)
+7
+1
+1 5 6 2
+
+#right_wall (green)
+3
+1
+3 7 4 0
+
+#brown_back_back (brown)
+6
+1
+12 16 19 15
+
+#brown_block_left (brown)
+6
+1
+13 17 16 12
+
+#brown_block_front (brown)
+6
+1
+14 18 17 13
+
+#brown_block_right (brown)
+6
+1
+15 19 18 14
+
+#white_back_back (white)
+1
+1
+16 20 23 19
+
+#white_block_left (white)
+1
+1
+17 21 20 16
+
+#white_block_front (white)
+1
+1
+18 22 21 17
+
+#white_block_right (white)
+1
+1
+19 23 22 18
+
+#yellow_back_back (yellow)
+7
+1
+20 24 27 23
+
+#yellow_block_left (yellow)
+7
+1
+21 25 24 20
+
+#yellow_block_front (yellow)
+7
+1
+22 26 25 21
+
+#yellow_block_right (yellow)
+7
+1
+23 27 26 22
+
+#yellow_block_top (yellow)
+7
+1
+24 25 26 27
+##############################
+#green_block_back
+3
+1
+28 32 35 31
+
+#green_block_left 
+3
+1
+29 33 32 28
+
+#green_block_front
+3
+1
+30 34 33 29
+
+#green_block_right (white)
+3
+1
+31 35 34 30
+
+#pink_block_back
+8
+1
+32 36 39 35
+
+#pink_block_left 
+8
+1
+33 37 36 32
+
+#pink_block_front
+8
+1
+34 38 37 33
+
+#pink_block_right (white)
+8
+1
+35 39 38 34
+
+#pink_block_top (white)
+8
+1
+36 37 38 39
+####################################
+#blue_block_back
+9
+1
+40 44 47 43
+
+#blue_block_left 
+9
+1
+41 45 44 40
+
+#blue_block_front
+9
+1
+42 46 45 41
+
+#blue_block_right (white)
+9
+1
+43 47 46 42
+
+#red_block_back
+2
+1
+44 48 51 47
+
+#red_block_left 
+2
+1
+45 49 48 44
+
+#red_block_front
+2
+1
+46 50 49 45
+
+#red_block_right (white)
+2
+1
+47 51 50 46
+
+#red_block_top (white)
+2
+1
+48 49 50 51
+##########################################
+#brown_block_back
+6
+1
+52 56 59 55
+
+#brown_block_left 
+6
+1
+53 57 56 52
+
+#brown_block_front
+6
+1
+54 58 57 53
+
+#brown_block_right (white)
+6
+1
+55 59 58 54
+
+#turquoise_block_back
+4
+1
+56 60 63 59
+
+#turquoise_block_left 
+4
+1
+57 61 60 56
+
+#turquoise_block_front
+4
+1
+58 62 61 57
+
+#turquoise_block_right (white)
+4
+1
+59 63 62 58
+
+#turquoise_block_top (white)
+4
+1
+60 61 62 63
+#End of file.
