@@ -1,6 +1,6 @@
 # GraphicsRenderingTechniques
 ## Assignment 1
-Complete an OpenGL program to <b>draw a skybox</b> and perform <b>normal mapping,
+Complete an <b>OpenGL</b> program to <b>draw a skybox</b> and perform <b>normal mapping,
 procedural bump mapping and reflection mapping</b>. 
 
 ![image](https://github.com/NicsunXnus/GraphicsRenderingTechniques/assets/77189033/b00a7c99-410b-4ee7-9eb7-508a56786da8)
